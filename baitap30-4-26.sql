@@ -38,3 +38,33 @@ CREATE TABLE bookings (
 
 CREATE INDEX idx_showtime_time ON showtimes(show_time);
 CREATE INDEX idx_booking_phone ON bookings(phone);
+
+INSERT INTO movies (title, duration_minutes, age_restriction) VALUES
+('Avengers: Secret Wars', 150, 13),
+('Dune: Part Two', 165, 13),
+('Deadpool 3', 130, 18),
+('Kung Fu Panda 4', 95, 0);
+
+INSERT INTO rooms (name, max_seats, status) VALUES
+('Room 1', 100, 'active'),
+('Room 2', 80, 'active'),
+('Room 3', 60, 'maintenance');
+
+INSERT INTO showtimes (movie_id, room_id, show_time, ticket_price) VALUES
+(1, 1, '2026-05-01 10:00:00', 90000),
+(2, 1, '2026-05-01 13:30:00', 100000),
+(3, 2, '2026-05-01 16:00:00', 120000),
+(4, 2, '2026-05-01 18:30:00', 80000),
+(1, 1, '2026-05-02 20:00:00', 95000);
+
+INSERT INTO bookings (showtime_id, customer_name, phone) VALUES
+(1, 'Nguyen Van A', '0900000001'),
+(1, 'Tran Thi B', '0900000002'),
+(2, 'Le Van C', '0900000003'),
+(2, 'Pham Thi D', '0900000004'),
+(3, 'Hoang Van E', '0900000005'),
+(3, 'Nguyen Thi F', '0900000006'),
+(4, 'Tran Van G', '0900000007'),
+(4, 'Le Thi H', '0900000008'),
+(5, 'Pham Van I', '0900000009'),
+(5, 'Hoang Thi K', '0900000010');
