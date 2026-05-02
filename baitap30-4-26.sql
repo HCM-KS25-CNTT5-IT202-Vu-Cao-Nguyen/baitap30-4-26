@@ -68,3 +68,17 @@ INSERT INTO bookings (showtime_id, customer_name, phone) VALUES
 (4, 'Le Thi H', '0900000008'),
 (5, 'Pham Van I', '0900000009'),
 (5, 'Hoang Thi K', '0900000010');
+
+UPDATE rooms
+SET status = 'maintenance'
+WHERE id = 1;
+
+UPDATE showtimes
+SET room_id = 2
+WHERE room_id = 1;
+
+DELETE FROM bookings
+WHERE phone = '0987654321';
+
+DELETE FROM movies
+WHERE id = 3;
